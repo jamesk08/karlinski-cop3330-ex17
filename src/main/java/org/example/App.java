@@ -10,16 +10,16 @@ public class App
     public static void main( String[] args )
     {
         BloodAlcoholCalculator bac = new BloodAlcoholCalculator();
-        int genderTypeId = bac.GetGenderTypeId();
-        int alcoholAmountConsumedInOz = bac.GetIntInput("How many ounces of alcohol did you have? ");
-        int weight = bac.GetIntInput("What is your weight, in pounds? ");
-        int hoursPassedSinceLastDrink = bac.GetIntInput("How many hours has it been since your last drink? ");
+        int genderTypeId = bac.getGenderTypeId();
+        int alcoholAmountConsumedInOz = bac.getIntInput("How many ounces of alcohol did you have? ");
+        int weight = bac.getIntInput("What is your weight, in pounds? ");
+        int hoursPassedSinceLastDrink = bac.getIntInput("How many hours has it been since your last drink? ");
 
-        double bloodAlcoholLevel = bac.CalculateBloodAlcoholLevel(
+        double bloodAlcoholLevel = bac.calculateBloodAlcoholLevel(
             genderTypeId, alcoholAmountConsumedInOz, weight, hoursPassedSinceLastDrink
         );
 
-        bac.DisplayMessage(bloodAlcoholLevel);
+        bac.displayMessage(bloodAlcoholLevel);
     }
 }
 

@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class BloodAlcoholCalculator {
     Scanner Scanner = new Scanner(System.in);
 
-    public int GetGenderTypeId()
+    public int getGenderTypeId()
     {
         System.out.print("Enter a 1 if you are male or a 2 if you are female: ");
         int genderTypeId = 0;
@@ -37,7 +37,7 @@ public class BloodAlcoholCalculator {
         return genderTypeId;
     }
 
-    public int GetIntInput(String inputRequestMessage)
+    public int getIntInput(String inputRequestMessage)
     {
         System.out.print(inputRequestMessage);
 
@@ -54,7 +54,7 @@ public class BloodAlcoholCalculator {
         return intInput;
     }
 
-    public double CalculateBloodAlcoholLevel(
+    public double calculateBloodAlcoholLevel(
             int genderIdType,
             int alcoholAmountConsumedInOz,
             int weight,
@@ -72,7 +72,7 @@ public class BloodAlcoholCalculator {
         return bloodAlcoholLevel;
     }
 
-    public void DisplayMessage(double bloodAlcoholLevel) {
+    public void displayMessage(double bloodAlcoholLevel) {
         DecimalFormat formatter = new DecimalFormat("0.00");
         System.out.println(MessageFormat.format("Your BAC is {0}.", formatter.format(bloodAlcoholLevel)));
         if(bloodAlcoholLevel >= 0.08) {
